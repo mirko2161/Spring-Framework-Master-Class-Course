@@ -1,0 +1,69 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+#
+# The above will handle all files NOT found below
+#
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.doc    diff=astextplain
+*.DOC    diff=astextplain
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+*.dot    diff=astextplain
+*.DOT    diff=astextplain
+*.pdf    diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain
+
+*.adoc          text
+*.css           text
+*.csv           text
+*.df            text
+*.htm           text
+*.html          text
+*.java          text
+*.js            text
+*.json          text
+*.jsp           text
+*.jspf          text
+*.jspx          text
+*.md            text
+*.properties    text
+*.sh            text
+*.sql           text
+*.tld           text
+*.txt           text
+*.tab           text
+*.tag           text
+*.tagx          text
+*.textile       text
+*.tsv           text
+*.xml           text
+*.yml           text
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.dll           binary
+*.ear           binary
+*.eps           binary
+*.gif           binary
+*.ico           binary
+*.jar           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
+*.so            binary
+*.tif           binary
+*.tiff          binary
+*.war           binary
+
+# SVG treated as an asset (binary) by default. If you want to treat it as text,
+# comment-out the following line and uncomment the line after.
+*.svg           binary
+#*.svg          text
