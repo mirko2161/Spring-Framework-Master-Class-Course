@@ -1,10 +1,10 @@
 package com.in28minutes.spring.basics.springin5steps;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary // used to tell Spring to go with this component first
+@Qualifier("bubble") // used to tell Spring to tag this bean so it can be specified as the autowired component
 public class BubbleSortAlgorithm implements SortAlgorithm {
 
     @Override
