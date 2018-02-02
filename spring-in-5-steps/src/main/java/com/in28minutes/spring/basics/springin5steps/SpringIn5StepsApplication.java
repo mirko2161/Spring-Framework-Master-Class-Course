@@ -11,6 +11,10 @@ public class SpringIn5StepsApplication {
 
         ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+        BinarySearchImpl binarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
+
+        System.out.println(binarySearch); // by default same objects
+        System.out.println(binarySearch2);
 
         int result = binarySearch.binarySearch(new int[] { 12, 4, 6 }, 3);
         System.out.println(result);
