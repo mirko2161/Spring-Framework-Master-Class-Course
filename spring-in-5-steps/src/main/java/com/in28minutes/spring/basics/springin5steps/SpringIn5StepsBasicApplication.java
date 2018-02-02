@@ -4,12 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.in28minutes.spring.basics.springin5steps.basic.BinarySearchImpl;
+
 @SpringBootApplication // Automatically scans the package and it's subpackages
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsBasicApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         BinarySearchImpl binarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
 
