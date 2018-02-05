@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class SomeExternalService {
 
     @Value("${external.service.url}")
-    private String url; // we what this to be different in diff environments
+    private String url; // we want this to be different in diff environments
 
     public String returnServiceURL() {
         return url;
