@@ -8,6 +8,6 @@
   </head>
 
   <body>
-      My first JSP !
+      My first JSP by ${name}
   </body>
 </html>

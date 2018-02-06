@@ -22,6 +22,13 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // when passing a request parameter in the URL, we can see its value with the getParameter method
+        String name = request.getParameter("name");
+        System.out.println(name);
+
+        // putting the parameter in an attribute so that the JSP can see it
+        request.setAttribute("name", name);
+
         request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
     }
 
